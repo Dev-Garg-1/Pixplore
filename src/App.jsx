@@ -33,6 +33,19 @@ function App() {
 
   return loading ? 
   <h1 className='text-center text-3xl font-medium mt-20 animate-pulse text-gray-600'>Loading Images...</h1> 
+  : (!loading && photos.length === 0) ? 
+    <div className='min-h-screen bg-gray-100'>
+        <div className='bg-white shadow-md flex flex-col md:flex-row justify-between items-center px-6 py-4'>
+          <h1 className='text-3xl md:text-4xl font-extrabold text-gray-800 mb-2 md:mb-0 text-shadow-lg'>
+            PIXPLORE
+          </h1>
+          <ImageSearch searchText={(text) => setTerm(text)} />
+        </div>
+
+        <div className='text-4xl text-center h-auto w-auto mt-12 font-bold'>
+          NO IMAGES FOUND
+        </div>
+    </div>
   : 
   (
     <div className='min-h-screen bg-gray-100'>
