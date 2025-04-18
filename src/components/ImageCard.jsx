@@ -33,7 +33,7 @@ function ImageCard({ photo }) {
           onClick={handleDownload}
           className='absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 text-white px-4 py-2 text-sm rounded-md cursor-pointer'
         >
-          Download
+          <i class="fa-solid fa-download"></i>
         </button>
 
         <div className='p-4 bg-white'>
